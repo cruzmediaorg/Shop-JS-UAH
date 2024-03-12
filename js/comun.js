@@ -66,7 +66,9 @@ $(document).ready(function () {
     $('#resetstorage').click(function () {
         localStorage.clear();
         window.location.href = "./index.html";
+        alert('Storage reiniciado');
     });
+
 
     /*
         Renderizar la barra de navegación

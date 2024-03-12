@@ -8,7 +8,7 @@ $(document).ready(function () {
         productos = JSON.parse(localStorage.getItem('productos'));
     } else {
         // Datos predeterminados si no hay nada en localStorage
-        categorias = ["Smartphones", "Televisiones"];
+        categorias = ["Smartphones", "Televisiones", "Ordenadores", "Electrodomésticos"];
 
         productos = [{
                 id: 1,
@@ -50,6 +50,66 @@ $(document).ready(function () {
                 precio: 1399,
                 stock: 10
             },
+            {
+                id: 5,
+                nombre: 'MacBook Pro 2022',
+                imagen: 'images/laptop3.jpeg',
+                codigo: 'SKU-338474',
+                descripcion: 'MacBook Pro 2022 con M2, 16GB RAM, 512GB SSD',
+                categoria: 'Ordenadores',
+                precio: 1453,
+                stock: 15
+            },
+            {
+                id: 6,
+                nombre: 'Dell XPS 15',
+                imagen: 'images/laptop2.jpeg',
+                codigo: 'SKU-338474',
+                descripcion: 'Dell XPS 15 con i7, 16GB RAM, 512GB SSD',
+                categoria: 'Ordenadores',
+                precio: 899,
+                stock: 3
+            },
+            {
+                id: 7,
+                nombre: 'HP Pavilion',
+                imagen: 'images/laptop1.webp',
+                codigo: 'SKU-338433',
+                descripcion: 'HP Pavilion con Ryzen 7, 16GB RAM, 512GB SSD',
+                categoria: 'Ordenadores',
+                precio: 799,
+                stock: 5
+            },
+            {
+                id: 8,
+                nombre: 'PlayStation 5',
+                imagen: 'images/ps5.webp',
+                codigo: 'SKU-134433',
+                descripcion: 'PlayStation 5 con 1TB de almacenamiento',
+                categoria: 'Electrodomésticos',
+                precio: 499,
+                stock: 12
+            },
+            {
+                id: 9,
+                nombre: 'Freidora de aire LG',
+                imagen: 'images/freidora.webp',
+                codigo: 'SKU-338111',
+                descripcion: 'Freidora de aire LG con 5 litros de capacidad',
+                categoria: 'Electrodomésticos',
+                precio: 99,
+                stock: 5
+            },
+            {
+                id: 10,
+                nombre: 'Robot aspirador iRobot',
+                imagen: 'images/aspirador.webp',
+                codigo: 'SKU-338433',
+                descripcion: 'Robot aspirador iRobot con mapeo y app',
+                categoria: 'Electrodomésticos',
+                precio: 299,
+                stock: 5
+            }
         ];
 
         // Guardar datos predeterminados en localStorage
