@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.0.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        .card-img-top {
+            width: 100%;
+            /* Asegura que la imagen cubra el ancho del contenedor */
+            transition: transform 0.5s ease;
+            /* Transición suave para el transform */
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+            /* Aumenta el tamaño de la imagen cuando el cursor está encima */
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            /* Adjust the value to your desired maximum height */
+            object-fit: contain;
+            /* Ensure the image covers the entire container while maintaining aspect ratio */
+            transition: transform 0.5s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="barraDeNavegacion"></div>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Categorías</h2>
+            <button id="btnAgregarCategoria" class="btn btn-primary">Agregar Categoría</button>
+        </div>
+
+        <table class="table" id="tablaCategorias">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las categorías se insertarán aquí -->
+            </tbody>
+        </table>
+        <div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="categoriaModalLabel">Nueva Categoría</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formCategoria">
+                            <div class="form-group">
+                                <label for="nombreCategoria">Nombre</label>
+                                <input type="text" class="form-control" id="nombreCategoria" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="guardarCategoria">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/categorias.js"></script>
+</body>
+
+</html>

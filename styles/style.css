@@ -1,0 +1,29 @@
+.card-img-top {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.card-body {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.card-text {
+    font-size: 0.9rem;
+}

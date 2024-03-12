@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online | Productos </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="barraDeNavegacion"></div>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Productos</h2>
+            <button id="btnAgregarProducto" class="btn btn-primary">Agregar Producto</button>
+        </div>
+        <table class="table" id="tablaProductos">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productoModalLabel">Nuevo Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formProducto">
+                        <label for="nombreProducto">Nombre</label>
+                        <input type="text" class="form-control" id="nombreProducto" required>
+                        <label for="imagenProducto">Imagen (path)</label>
+                        <input type="text" class="form-control" id="imagenProducto" required>
+                        <p class="text-muted">Ejemplo: images/imagen.jpg (Debe existir la imagen en la carpeta
+                            images)</p>
+                        <input type="hidden" id="productoId">
+                        <div class="form-group">
+                            <label for="codigoProducto">Código</label>
+                            <input type="text" class="form-control" id="codigoProducto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="categoriaProducto">Categoría</label>
+                            <select class="form-control" id="categoriaProducto" required>
+                                <option value="">Selecciona una categoría</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcionProducto">Descripción</label>
+                            <input type="text" class="form-control" id="descripcionProducto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="precioProducto">Precio</label>
+                            <input type="number" class="form-control" id="precioProducto" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stockProducto">Stock</label>
+                            <input type="number" class="form-control" id="stockProducto" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="guardarProducto">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>
