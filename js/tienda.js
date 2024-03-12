@@ -195,7 +195,7 @@ $(document).ready(function () {
         if (Object.keys(cesta).length > 0) {
             localStorage.setItem('orden', JSON.stringify(cesta));
             cesta = []; // Limpia la cesta
-            window.location.href = 'realizado.html'; // Redirige a la página de pedido realizado para mostrar el resumen
+            window.location.href = 'confirmacion.html'; // Redirige a la página de pedido realizado para mostrar el resumen
         } else {
             alert('La cesta está vacía.');
         }
